@@ -29,3 +29,11 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     })
 
     .catch(err => console.error(err))
+
+function getCurrentTime() {
+    const date = new Date();
+    document.getElementById("time").textContent = date.toLocaleTimeString('en-US', { timeStyle: 'medium' });
+}
+
+setInterval(getCurrentTime, 1000);
+
